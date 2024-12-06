@@ -1,15 +1,18 @@
 import { PerspectiveCamera } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
-import LostProgrammer from '../components/LostProgrammer'
-import CanvasLoader from '../components/CanvasLoader'
 import { Suspense } from 'react'
 /* import { Leva, useControls } from 'leva' */
 import { useMediaQuery } from 'react-responsive'
 import { calculateSizes } from '../constants/index.js'
-import ReactLogo from '../components/ReactLogo.jsx'
-import JavaScriptLogo from '../components/JavaScriptLogo.jsx'
-import HelloWorld from '../components/HelloWorld.jsx'
-import HeroCamera from '../components/HeroCamera.jsx'
+import {
+  CanvasLoader,
+  HelloWorld,
+  JavaScriptLogo,
+  LostProgrammer,
+  ReactLogo,
+  Button,
+  HeroCamera,
+} from '../components/components.js'
 
 const Hero = () => {
   /*  const x = useControls('Hello world', {
@@ -72,7 +75,7 @@ const Hero = () => {
         <Canvas className="w-full h-full">
           <Suspense fallback={<CanvasLoader />}>
             <PerspectiveCamera makeDefault position={[0, 0, 25]} />
-            <HeroCamera>
+            <HeroCamera isMobile={isMobile}>
               <LostProgrammer
                 scale={isMobile ? [5, 5, 5] : [7, 7, 7]}
                 position={isMobile ? [-1, -0.5, 1.5] : [-1, -2, 1.5]}
@@ -88,6 +91,16 @@ const Hero = () => {
             <directionalLight intensity={0.5} position={(10, 10, 10)} />
           </Suspense>
         </Canvas>
+      </div>
+
+      <div className="absolute bottom-7 left-0 right-0 w-full z-10 c-space">
+        <a href="#contact" className="w-fit">
+          <Button
+            name="Let's work together"
+            isBeam
+            containerClass="sm:w-fit w-full sm:min-w-96"
+          />
+        </a>
       </div>
     </section>
   )

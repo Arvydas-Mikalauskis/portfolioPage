@@ -6,20 +6,22 @@ Source: https://sketchfab.com/3d-models/hello-world-d07c64ee9e8e4e49b51445f536dd
 Title: Hello World
 */
 
-import { useGLTF } from '@react-three/drei'
+import { Float, useGLTF } from '@react-three/drei'
 
 const HelloWorld = (props) => {
   const { nodes, materials } = useGLTF('models/hello_world.glb')
   return (
-    <group {...props} dispose={null} scale={3} rotation={[2, 3, 0]}>
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Object_4.geometry}
-        material={materials.brush_Light}
-        rotation={[Math.PI / 2, 0, 0]}
-      />
-    </group>
+    <Float floatIntensity={1}>
+      <group {...props} dispose={null} scale={3} rotation={[2, 3, 0]}>
+        <mesh
+          castShadow
+          receiveShadow
+          geometry={nodes.Object_4.geometry}
+          material={materials.brush_Light}
+          rotation={[Math.PI / 2, 0, 0]}
+        />
+      </group>
+    </Float>
   )
 }
 
