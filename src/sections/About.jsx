@@ -26,10 +26,14 @@ const About = () => {
               className="w-full h-fit object-contain sm:h-[276px]"
             />
             <div>
-              <p className="grid-headtext">Hi, I'm Arvydas</p>
+              <p className="grid-headtext">Hi, I'm Arvis</p>
               <p className="grid-subtext">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
-                adipisci consectetur consequuntur?
+                A passionate front-end developer with a fresh perspective on
+                building modern, user-friendly websites. I honed my skills in
+                React, JavaScript, and responsive design. I thrive on solving
+                challenges through clean, functional code and am eager to
+                contribute to meaningful projects that create great user
+                experiences.
               </p>
             </div>
           </div>
@@ -39,15 +43,18 @@ const About = () => {
         <div className="col-span-1 xl:row-span-3">
           <div className="grid-container">
             <img
-              src="/assets/grid2.png"
+              src="/assets/grid6.png"
               alt="grid2"
-              className="w-full h-fit object-contain sm:w-[276px]"
+              className="w-full h-fit object-contain sm:w-[276px] mx-auto"
             />
             <div>
               <p className="grid-headtext">Tech Stack</p>
               <p className="grid-subtext">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam,
-                eligendi.
+                My tech stack is centered around JavaScript and React, which I
+                use to build dynamic and interactive web applications. I have
+                experience working with TypeScript to add type safety and
+                scalability to projects, and I’m currently expanding my skills
+                by learning backend development with Node.js and Express
               </p>
             </div>
           </div>
@@ -81,11 +88,22 @@ const About = () => {
               />
             </div>
             <div>
-              <p className="grid-headtext">Lorem ipsum dolor sit.</p>
-              <p className="grid-subtext">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              <p className="grid-headtext">
+                Flexible with time zone communications & locations
               </p>
-              <Button name="Contact Me" isBeam containerClass="w-full mt-10" />
+              <p className="grid-subtext">
+                I&apos;m based in Trøndelag, Norway, and open to remote work
+                worldwide or on-site opportunities within the Trøndelag region.
+                I&apos;m also flexible with time zones to accommodate seamless
+                communication.
+              </p>
+              <a href="#contact">
+                <Button
+                  name="Contact Me"
+                  isBeam
+                  containerClass="w-full mt-10"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -99,13 +117,15 @@ const About = () => {
               className="w-full h-fit object-contain sm:h-[266px]"
             />
             <div>
-              <p className="grid-headtext">
-                Lorem, ipsum dolor sit amet consectetur.
-              </p>
+              <p className="grid-headtext">My Passion for Coding</p>
               <p className="grid-subtext">
                 {' '}
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Asperiores, atque!
+                I enjoy solving challenging problems and building things through
+                code. Programming isn't just my profession—it's my passion. I
+                love exploring and learning new technologies, and enhancing my
+                skills daily. Currently, I am exploring backend development to
+                expand my skills and become a more versatile full-stack
+                developer.
               </p>
             </div>
           </div>
@@ -120,7 +140,7 @@ const About = () => {
               className="w-full h-fit object-cover sm:object-top sm:h-[276px] md:h-[126px]"
             />
             <div className="space-y-2">
-              <p className="grid-subtext text-center">Contact Me:</p>
+              <p className="grid-subtext text-center">Contact Me</p>
               <div onClick={handleCopy} className="copy-container">
                 <img
                   src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'}
